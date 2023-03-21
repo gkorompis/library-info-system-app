@@ -1,9 +1,15 @@
 import AWS from 'aws-sdk';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const accessKeyId = process.env.ACCESS_KEY_ID;
+const secretAccessKey = process.env.SECRET_KEY_ID;
 
 let awsConfig = {
         "region": "ap-southeast-3",
         "endpoint": "http://dynamodb.ap-southeast-3.amazonaws.com",
-        "accessKeyId": "AKIA4XOQAZAUFGVEAH4U", "secretAccessKey": "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"
+        "accessKeyId": accessKeyId, "secretAccessKey": secretAccessKey
     };
 AWS.config.update(awsConfig);
 let docClient = new AWS.DynamoDB.DocumentClient();
