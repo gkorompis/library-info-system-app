@@ -1,0 +1,4 @@
+1. to run script type on terminal:
+node <script_name>.js
+
+eg. node alg-01.js
